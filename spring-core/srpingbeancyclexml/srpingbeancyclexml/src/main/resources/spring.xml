@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean name="employer" class="com.encodeit.Employer" />
+
+	<bean name="employerService" class="com.encodeit.EmployerService">
+		<property name="employer" ref="employer"></property>
+	</bean>
+	
+	<!-- <bean name="myEmployerService" class="com.encodeit.MyEmployerService" init-method="init" destroy-method="destroy">
+		<property name="employer" ref="employer"></property>
+	</bean> -->
+	
+</beans>
