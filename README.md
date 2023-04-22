@@ -1,7 +1,7 @@
 # java-training-exercises
 ## Instructions
 1. Go to https://github.com/fullstackproj/java-training-exercises
-2. Download as Zip
+2. Click on 'Code' Green button and Download as Zip
 3. Extract the Zip
 4. Go inside spring-core folder
 5. Copy each folder into your workspace (For Example, copy springbeancyclexml into your workspace)
