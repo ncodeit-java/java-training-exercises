@@ -6,6 +6,5 @@
 4. Go inside spring-core folder
 5. Copy each folder into your workspace (For Example, copy springbeancyclexml into your workspace)
 6. Go to Eclipse
-7. Right click on project explorer(left side) and click on import
-8. Go to Import...-> Existing Maven Projects
-9. In Import Maven Prpojects Window, Click on browse navigate to your workspace and select the project folder and click Finish 
+7. Go to File->Import...-> Existing Maven Projects
+8. In Import Maven Prpojects Window, Click on browse navigate to your workspace and select the project folder and click Finish 
