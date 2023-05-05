@@ -1,0 +1,14 @@
+{
+  "studentId": 1,
+  "studentName": "stud1",
+  "courses": [
+    {
+      "courseId": "01",
+      "courseName": "java"
+    },
+    {
+      "courseId": "02",
+      "courseName": "spring"
+    }
+  ]
+}
