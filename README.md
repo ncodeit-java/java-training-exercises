@@ -9,3 +9,4 @@
 7. Go to File->Import...-> Existing Maven Projects
 8. In Import Maven Projects Window, Click on browse navigate to your workspace and select the project folder and click Finish
 9. For Spring-core, go inside the folder and repeat steps 6,7,8 
+10. For Spring data jpa, to view the tables in memory visit - http://localhost:8080/h2-console/
