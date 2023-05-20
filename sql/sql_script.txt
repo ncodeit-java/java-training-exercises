@@ -1,0 +1,62 @@
+create table employee(empid int primary key,empname varchar(100), department varchar(50),contactno bigint, emailid varchar(100), empheadid int)
+
+create table empdept(deptid varchar(50) primary key,deptname varchar(100), dept_off varchar(100), depthead int foreign key references employee(empid))
+
+create table empsalary(empid int foreign key references employee(empid), salary bigint, ispermanent varchar(3))
+
+create table project(projectid varchar(50) primary key, duration int)
+
+create table country(cid varchar(50) primary key, cname varchar(100))
+
+create table clienttable(clientid varchar(50) primary key, clientname varchar(100), cid varchar(50) references country(cid))
+
+create table empproject(empid int foreign key references employee(empid), projectid varchar(50) foreign key references project(projectid), clientid varchar(50) foreign key references clienttable(clientid),startyear int, endyear int)
+
+INSERT INTO employee  
+VALUES   (101,'Isha','E-101','1234567890','isha@gmail.com',105),
+		(102,'Priya','E-104','1234567890','priya@yahoo.com',103),
+		(103,'Neha,'E-101','1234567890','neha@gmail.com',101),
+		(104,'Rahul','E-102','1234567890','rahul@yahoo.com',105),
+        (105,'Abhishek','E-101','1234567890','abhishek@gmail.com',102);
+		
+INSERT INTO empdept  
+VALUES 	('E-101','HR','Monday',105),  
+        ('E-102','Development','Tuesday',101),  
+        ('E-103','Hous Keeping','Saturday',103),  
+        ('E-104','Sales','Sunday',104),   
+        ('E-105','Purchage','Tuesday',104);
+
+INSERT INTO empsalary  
+VALUES    (101,2000,'Yes'),     
+         (102,10000,'Yes'),       
+         (103,5000,'No'),
+         (104,1900,'Yes'),
+         (105,2300,'Yes');
+
+INSERT INTO project  
+VALUES  ('p-1',23),
+        ('p-2',15),
+        ('p-3',45),
+        ('p-4',2),
+        ('p-5',30);
+
+INSERT INTO country  
+VALUES	('c-1','India'),     
+        ('c-2','USA'),  
+        ('c-3','China'),         
+        ('c-4','Pakistan'),        
+        ('c-5','Russia');
+
+INSERT INTO clienttable  
+VALUES	('cl-1','ABC Group','c-1'),    
+        ('cl-2','PQR','c-1'),
+        ('cl-3','XYZ','c-2'),    
+        ('cl-4','tech altum','c-3'),
+        ('cl-5','mnp','c-5');
+
+INSERT INTO empproject  
+VALUES	('cl-1','ABC Group','c-1'),    
+        ('cl-2','PQR','c-1'),
+        ('cl-3','XYZ','c-2'),    
+        ('cl-4','tech altum','c-3'),
+        ('cl-5','mnp','c-5');		
